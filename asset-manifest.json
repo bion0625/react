@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "https://bion0626.github.io/react/static/js/main.8e762735.js",
+    "main.js": "https://bion0626.github.io/react/static/js/main.13ce2a0b.js",
     "index.html": "https://bion0626.github.io/react/index.html",
-    "main.8e762735.js.map": "https://bion0626.github.io/react/static/js/main.8e762735.js.map"
+    "main.13ce2a0b.js.map": "https://bion0626.github.io/react/static/js/main.13ce2a0b.js.map"
   },
   "entrypoints": [
-    "static/js/main.8e762735.js"
+    "static/js/main.13ce2a0b.js"
   ]
 }
