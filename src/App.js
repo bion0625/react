@@ -12,7 +12,7 @@ function App() {
   }
 
   const getCount = () => {
-    setCount(Math.round(money / document.querySelector('#coin').value));
+    setCount(Math.floor(money / document.querySelector('#coin').value));
   }
 
   useEffect(()=>{
@@ -30,17 +30,19 @@ function App() {
         loading ? (
           <strong>Loading...</strong>
           ) : (
-          <select id="coin" onChange={getCount}>
-          {coins.map((coin) => 
-            <option value={coin.quotes.USD.price} key={coin.id}>{coin.name} ({coin.symbol}) : ${coin.quotes.USD.price} USD</option>
-          )}
-          </select>
+          <div>
+            <select id="coin" onChange={getCount}>
+            {coins.map((coin) => 
+              <option value={coin.quotes.USD.price} key={coin.id}>{coin.name} ({coin.symbol}) : ${coin.quotes.USD.price} USD</option>
+            )}
+            </select>
+            <div>
+              <span>$</span><input type="number" placeholder="write the money (USD)" onChange={insertMoney} value={money} /><span>USD</span>
+            </div>
+            <span>you can buy <strong style={{color:"tomato"}}>{count}</strong></span>
+          </div>
         )
       }
-      <div>
-      <span>$</span><input type="number" placeholder="write the money (USD)" onChange={insertMoney} value={money} /><span>USD</span>
-      </div>
-      <span>you can buy {count}</span>
     </div>
   );
 }
