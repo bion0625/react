@@ -1,7 +1,10 @@
 # router install cli
 npm install react-router-dom
 
-
+# github deploy install cli
+npm i env-cmd
+npm i gh-pages
+npm run deploy
 
 
 

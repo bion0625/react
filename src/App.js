@@ -7,11 +7,11 @@ import Detail from "./routes/Detail";
 
 const App = createBrowserRouter([
   {
-    path: "/movie/:id",
+    path: `/movie/:id`,
     element: <Detail />
   },
   {
-    path: "/",
+    path: `/`,
     element: <Home />,
   },
 ]);
