@@ -1,19 +1,25 @@
 import * as React from "react";
 import {
-  createBrowserRouter,
+  BrowserRouter as Router,
+  Switch,
+  Route
 } from "react-router-dom";
 import Home from "./routes/Home";
 import Detail from "./routes/Detail";
 
-const App = createBrowserRouter([
-  {
-    path: "/movie/:id",
-    element: <Detail />
-  },
-  {
-    path: "/",
-    element: <Home />,
-  },
-]);
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+      <Route path="/movie/:id">
+          <Detail />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
+  );
+}
 
 export default App;
